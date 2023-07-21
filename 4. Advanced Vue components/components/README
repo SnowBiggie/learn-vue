@@ -1,0 +1,26 @@
+## Props
+
+Props are a way to pass data from a parent component to a child component in Vue. They allow you to define custom attributes on a component and bind values to those attributes when using the component. The parent component can pass data or even methods to the child component using props.
+
+To define props in a component, you specify them as an array or an object in the component's options or as a property in the component's class for single-file components. Each prop has a name and optional type, default value, and other configuration options.
+
+Props enable the child component to access and use the data passed from the parent component. The child component can reference props as variables and use them in its template or methods.
+
+Props are useful when you want to reuse a component with different data or when you want to create a hierarchy of components where data flows from parent to child.
+
+## Slots
+
+Slots are a way to define placeholders in a component's template that can receive and render content from the parent component. They allow the parent component to inject content into specific areas of the child component's template.
+
+A component can have one or more slots defined in its template. The slots can be named or unnamed. Unnamed slots act as the default slot and receive content that is not explicitly assigned to any named slots.
+
+In the parent component, when using a component with slots, you can provide content that will be rendered within the slots. This can be done by placing the content between the opening and closing tags of the component or by using the `v-slot` directive to assign content to named slots.
+
+Slots allow for dynamic content rendering and component composition. They provide a flexible way to customize the appearance and behavior of a component without modifying its internal implementation.
+
+By combining props and slots, you can create reusable components that can accept and render different data and content depending on how they are used. This promotes component reusability and modularity in your Vue applications.
+
+## Dynamic Components
+Dynamic components in Vue allow you to dynamically switch between different components based on a condition or data. They provide a way to render different components based on runtime conditions or user interactions.
+Dynamic components are useful when you have components with similar functionality but different implementations or when you want to conditionally render different components based on certain criteria.
+By utilizing dynamic components, you can create more flexible and reusable components that adapt to changing requirements and provide a more dynamic user experience.

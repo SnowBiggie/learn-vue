@@ -1,0 +1,67 @@
+
+## List Rendering in Vue
+
+Vue provides a number of features for rendering lists, including:
+
+* **`v-for`** : This directive iterates over an array and renders a template for each item.
+* **`track-by`** : This attribute can be used to track the identity of each item in the array, which can improve performance when the array is updated.
+* **`filterBy`** : This filter can be used to filter the items in an array before they are rendered.
+* **`orderBy`** : This filter can be used to sort the items in an array before they are rendered.
+
+### `v-for`
+
+The `v-for` directive is the most common way to render lists in Vue. It takes an array as its argument and renders a template for each item in the array. The template is repeated for each item in the array, with the current item being available as the `item` variable.
+
+For example, the following code renders a list of to-do items:
+
+```html
+<ul>
+  <li v-for="item in toDoItems">
+    {{ item.text }}
+  </li>
+</ul>
+```
+
+### `track-by`
+
+The `track-by` attribute can be used to track the identity of each item in the array. This can improve performance when the array is updated, as Vue can then reuse existing DOM elements instead of creating new ones.
+
+The `track-by` attribute takes a function as its argument. The function should return a unique value for each item in the array.
+
+For example, the following code uses the `id` property to track the identity of each to-do item:
+
+```html
+<ul>
+  <li v-for="item in toDoItems" :key="item.id">
+    {{ item.text }}
+  </li>
+</ul>
+```
+
+### `filterBy`
+
+The `filterBy` filter can be used to filter the items in an array before they are rendered. The filter takes a function as its argument. The function should return a Boolean value indicating whether or not the item should be included in the filtered array.
+
+For example, the following code filters the to-do items to only include items that are not completed:
+
+```html
+<ul>
+  <li v-for="item in toDoItems" v-if="!item.completed">
+    {{ item.text }}
+  </li>
+</ul>
+```
+
+### `orderBy`
+
+The `orderBy` filter can be used to sort the items in an array before they are rendered. The filter takes a function as its argument. The function should return a value that can be used to sort the items.
+
+For example, the following code sorts the to-do items by their due date:
+
+```html
+<ul>
+  <li v-for="item in toDoItems" v-sort="item.dueDate">
+    {{ item.text }}
+  </li>
+</ul>
+```

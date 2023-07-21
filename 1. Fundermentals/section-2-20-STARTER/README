@@ -1,0 +1,23 @@
+Conditional Rendering
+Conditional rendering in Vue is the concept of rendering content conditionally based on some expression or condition. This allows you to dynamically show or hide content based on user interactions, data properties, or other factors.
+
+There are two main directives in Vue that are used for conditional rendering: v-if and v-show.
+
+v-if
+v-if is a directive that conditionally renders content based on the value of a given expression. If the expression evaluates to true, the content is rendered, and if it evaluates to false, the content is removed from the DOM. The v-if directive also supports an optional v-else block that can be used to render different content when the expression is false.
+
+One of the benefits of v-if is that it allows you to completely remove or add content to the DOM based on the condition. This means that if the expression is false, the content is not rendered at all, which can be beneficial for performance in cases where the content is expensive to render.
+
+v-show
+v-show is a directive that conditionally toggles the visibility of an element based on the value of a given expression. If the expression evaluates to true, the element is displayed, and if it evaluates to false, the element is hidden using the CSS display property. The v-show directive does not remove or add content to the DOM, which means that the element is always present in the DOM, but it's hidden or shown based on the condition.
+
+One of the benefits of v-show is that it's less expensive than v-if in cases where the content is not expensive to render. This is because the element is always present in the DOM, and only the display property needs to be toggled to show or hide the element.
+
+Use cases
+v-if and v-show can be used in a variety of scenarios, depending on your use case and performance requirements.
+
+v-if is useful in cases where the content is expensive to render or when you want to completely remove or add content to the DOM based on the condition. For example, you might use v-if to conditionally render a component that makes an API request or to show a modal dialog when a button is clicked.
+
+v-show is useful in cases where the content is not expensive to render or when you want to toggle the visibility of an element based on the condition. For example, you might use v-show to conditionally show or hide a dropdown menu when a button is clicked or to toggle the visibility of a tooltip based on user interaction.
+
+Overall, it's important to choose the right directive based on your specific use case and performance requirements. While v-if and v-show are similar, they have different trade-offs in terms of performance and behavior.

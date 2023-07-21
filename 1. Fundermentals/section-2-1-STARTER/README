@@ -1,0 +1,20 @@
+Directives
+Directives in Vue are special HTML attributes that are used to manipulate the DOM in different ways. They are preceded by the prefix v-. For example, v-if, v-show, v-for, v-bind, etc. These directives are used to conditionally render content, loop through arrays, bind attributes to data, listen to events, and more.
+
+Two-way binding
+Two-way binding is a concept in Vue where changes made to a data property in the model are immediately reflected in the view and vice versa. It means that when the user interacts with the view, the changes are automatically reflected in the model, and when changes are made to the model, they are automatically reflected in the view.
+
+Listening to events
+Vue provides a way to listen to events that are triggered by the user or by the browser. To listen to an event in Vue, you can use the v-on directive or the shorthand @. For example, v-on:click="handler" or @click="handler". These directives are used to bind event listeners to the DOM elements and perform actions based on the event.
+
+Event modifiers
+Event modifiers are used to modify the behavior of an event. For example, @click.stop is used to stop the propagation of an event, @submit.prevent is used to prevent the default behavior of a submit event, and @keyup.enter is used to only listen for the enter key when a keyup event is triggered.
+
+v-model modifiers
+v-model is a directive used for two-way data binding between form input elements and Vue data. v-model modifiers are used to modify the behavior of v-model. For example, v-model.lazy is used to update the model only when the input field loses focus, v-model.number is used to convert the input value to a number, and v-model.trim is used to remove whitespace from the input value.
+
+Computed properties
+Computed properties are functions in Vue that are used to compute and return a value based on some other data properties in the model. Computed properties are cached and only re-evaluated when their dependencies change, which makes them more efficient than using a method to achieve the same result.
+
+Watchers
+Watchers in Vue are used to perform an action when a data property in the model changes. They are particularly useful when you need to perform an asynchronous or expensive operation based on a data property change. Watchers are defined as a function that receives the new value and the old value of the data property.
